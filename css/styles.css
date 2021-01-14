@@ -1,0 +1,57 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.coming-soon-image {
+  width: 500px;
+  height: 350px;
+  background-image: url('../images/coming-soon2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fade-element {
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+.fade-element.first {
+  animation-delay: 0.75s;
+}
+
+.fade-element.second {
+  animation-delay: 1.2s;
+}
+
+.fade-element.third {
+  animation-delay: 1.4s;
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .coming-soon-image {
+    width: 375px;
+    height: 262.5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .coming-soon-image {
+    width: 250px;
+    height: 175px;
+  }
+}
